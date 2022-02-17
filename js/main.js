@@ -30,14 +30,15 @@ function validarComportamiento(comportamiento){
     if(comportamiento.length === 0){
         return 'Este campo debe contener una de las tres opciones'
     }
-
+    return '';
 }
 
 function validarDescripcion(descripcion){
     if(descripcion.length === 0){
-        return 'Este campo debe tener algun caracter';
+        return 'Este campo descripcion debe tener algun caracter';
     }
-    if(descripcion.length >= 50){
-        return 'Este campo de texto debe tener menos de 50 caracteres'
+    if(descripcion.length >= 100){
+        return 'Este campo descripcion debe tener menos de 100 caracteres'
     }
+    return '';
 }

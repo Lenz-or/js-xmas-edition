@@ -24,11 +24,19 @@ function probarValidarNombre(){
     'Validar nombre no funciona con mas de 50 caracteres' ,   
     )
 
+    console.assert(validarNombre('Enzo') === '',
+    'Validar nombre fallo con un nombre valido',
+    )
+
 }
 
 function probarValidarCiudad(){
     console.assert(validarCiudad('') === 'Este campo debe contener una opcion', 
     'Validar ciudad no funciona sin elegir una opcion',
+    )
+
+    console.assert(validarCiudad('Buenos aires') === '',
+    'Validar ciudad fallo con una ciudad valida'            
     )
 
 }
@@ -40,12 +48,16 @@ function probarValidarComportamiento(){
 }
 
 function probarValidarDescripcion(){
-    console.assert(validarDescripcion('') === 'Este campo debe tener algun caracter',
+    console.assert(validarDescripcion('') === 'Este campo descripcion debe tener algun caracter',
     'Validar descripcion esta recibiendo el area de texto vacia',
     )
 
-    console.assert(validarDescripcion('11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111') === 'Este campo de texto debe tener menos de 50 caracteres',
-    'Validar descripcion esta recibiendo mas de 50 caracteres',
+    console.assert(validarDescripcion('11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111') === 'Este campo descripcion debe tener menos de 100 caracteres',
+    'Validar descripcion esta recibiendo mas de 100 caracteres',
+    )
+
+    console.assert(validarDescripcion('Hola') === '',
+    'Validar descripcion esta fallando con un texto valido',
     )
 }
 
