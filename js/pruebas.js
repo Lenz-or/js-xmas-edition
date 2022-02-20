@@ -29,8 +29,8 @@ function probarValidarNombre(){
     )
     console.assert(validarNombre('asDasd12414') === 'El campo nombre solo acepta letras',
     'Validar nombre no valido que el nombre solo tenga letras'
-    
     ) 
+
 }
 
 function probarValidarCiudad(){
