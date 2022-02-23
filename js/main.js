@@ -16,16 +16,29 @@ function validarFormulario(event){
 
     };
     
+    ocultarErroresAnteriores(document.querySelectorAll("#errores li"))
     const esExito= manejarErrores(errores) === 0;
 
     if(esExito){
         $form.className= "oculto";
         document.querySelector('#exito').className = "";
+        const redirigir = setTimeout(redireccionarPagina,5000);
     }
     
     event.preventDefault();
 
     
+}
+
+function redireccionarPagina(){
+    window.location.href= "./wishlist.html";
+}
+
+function ocultarErroresAnteriores(elemento){
+    const errores = elemento;
+    for(let i=0;i < elemento.length; i++){
+        errores[i].className = "oculto";
+    }
 }
 
 function manejarErrores(errores){
